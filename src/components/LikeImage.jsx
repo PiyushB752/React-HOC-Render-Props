@@ -1,16 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react';
+import CounterFunction from './Counter.jsx';
 
-export default function LikeImage() {
-
-  const [likeImageCounter, setLikeImageCounter] = useState(0);
-
-  const handleLikeImageCount = ()=>{
-    setLikeImageCounter(likeImageCounter+1);
-  }
-
+const LikeImage  = (e)=>{
   return (
     <div>
-      <button onClick={handleLikeImageCount}>Like Image {likeImageCounter}</button>
+      <button onClick={e.adder}>Like Image {e.count}</button>
     </div>
   )
 }
+export default CounterFunction(LikeImage);
